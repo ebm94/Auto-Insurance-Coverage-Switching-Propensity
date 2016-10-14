@@ -1,4 +1,5 @@
 #group size variables
+
 groupsize=fread("train.csv")
 #subsetting customer id,shoppng pt,record type,group size
 groupsize1=groupsize%>%select(customer_ID,shopping_pt,record_type,group_size)%>%filter(record_type==0)%>%arrange(customer_ID,desc(shopping_pt))
